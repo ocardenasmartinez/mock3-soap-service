@@ -9,7 +9,7 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 @Endpoint
-public class CountryEndpoint {
+public class TipoMimeEndpoint {
 
     private static final String NAMESPACE_URI = "http://soap.service.santander.cl";
 

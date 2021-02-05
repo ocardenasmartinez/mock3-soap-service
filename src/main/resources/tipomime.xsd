@@ -5,20 +5,20 @@
     <xs:element name="gdRecuperarComoTipoMimeWS">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="datosAcceso" type="tns:datosAcceso"/>
+                <xs:element name="idDocRecuperar" type="xs:string"/>
+                <xs:element name="tipoDoc" type="xs:string"/>
+                <xs:element name="tipoMIMEDestino" type="xs:string"/>
+                <xs:element name="datosAcceso">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="idServidor" type="xs:string"/>
+                            <xs:element name="usuarioPool" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
             </xs:sequence>
-            <xs:attribute name="idDocRecuperar" type="xs:string"/>
-            <xs:attribute name="TipoDoc" type="xs:string"/>
-            <xs:attribute name="tipoMIMEDestino" type="xs:string"/>
         </xs:complexType>
     </xs:element>
-
-    <xs:complexType name="datosAcceso">
-        <xs:sequence>
-            <xs:element name="idServidor" type="xs:string"/>
-            <xs:element name="usuarioPool" type="xs:string"/>
-        </xs:sequence>
-    </xs:complexType>
 
     <xs:element name="getCountryResponse">
         <xs:complexType>

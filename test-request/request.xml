@@ -7,7 +7,9 @@
             <v1:idServidor>CONDOCFN</v1:idServidor>
             <v1:usuarioPool>S</v1:usuarioPool>
          </v1:datosAcceso>
-
+         <v1:idDocRecuperar></v1:idDocRecuperar>
+         <v1:tipoDoc></v1:tipoDoc>
+         <v1:tipoMIMEDestino></v1:tipoMIMEDestino>
       </v1:gdRecuperarComoTipoMimeWS>
    </soapenv:Body>
 </soapenv:Envelope>
