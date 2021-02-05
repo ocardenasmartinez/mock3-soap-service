@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>cl.santander</groupId>
-	<artifactId>mock-soap-service2</artifactId>
+	<artifactId>mock3-soap-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>mock-soap-service2</name>
-	<description>mock-soap-service2</description>
+	<name>mock3-soap-service</name>
+	<description>mock3-soap-service</description>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
