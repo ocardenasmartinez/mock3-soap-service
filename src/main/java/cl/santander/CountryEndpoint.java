@@ -1,7 +1,7 @@
 package cl.santander;
 
 import cl.santander.service.soap.Country;
-import cl.santander.service.soap.GetCountryRequest;
+import cl.santander.service.soap.GdRecuperarComoTipoMimeWS;
 import cl.santander.service.soap.GetCountryResponse;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
@@ -13,9 +13,9 @@ public class CountryEndpoint {
 
     private static final String NAMESPACE_URI = "http://soap.service.santander.cl";
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "gdRecuperarComoTipoMimeWS")
     @ResponsePayload
-    public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
+    public GetCountryResponse getCountry(@RequestPayload GdRecuperarComoTipoMimeWS request) {
         GetCountryResponse response = new GetCountryResponse();
         Country country = new Country();
         country.setCapital("Capital");

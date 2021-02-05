@@ -2,13 +2,23 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://soap.service.santander.cl"
            targetNamespace="http://soap.service.santander.cl" elementFormDefault="qualified">
 
-    <xs:element name="getCountryRequest">
+    <xs:element name="gdRecuperarComoTipoMimeWS">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="name" type="xs:string"/>
+                <xs:element name="datosAcceso" type="tns:datosAcceso"/>
             </xs:sequence>
+            <xs:attribute name="idDocRecuperar" type="xs:string"/>
+            <xs:attribute name="TipoDoc" type="xs:string"/>
+            <xs:attribute name="tipoMIMEDestino" type="xs:string"/>
         </xs:complexType>
     </xs:element>
+
+    <xs:complexType name="datosAcceso">
+        <xs:sequence>
+            <xs:element name="idServidor" type="xs:string"/>
+            <xs:element name="usuarioPool" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
 
     <xs:element name="getCountryResponse">
         <xs:complexType>
