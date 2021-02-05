@@ -1,8 +1,8 @@
 package cl.santander;
 
-import cl.santander.service.soap.Country;
 import cl.santander.service.soap.GdRecuperarComoTipoMimeWS;
-import cl.santander.service.soap.GetCountryResponse;
+import cl.santander.service.soap.GdRecuperarComoTipoMimeWSResponse;
+import cl.santander.service.soap.MethodResult;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -11,15 +11,13 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 @Endpoint
 public class TipoMimeEndpoint {
 
-    private static final String NAMESPACE_URI = "http://soap.service.santander.cl";
-
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "gdRecuperarComoTipoMimeWS")
+    @PayloadRoot(namespace = "http://soap.service.santander.cl", localPart = "gdRecuperarComoTipoMimeWS")
     @ResponsePayload
-    public GetCountryResponse getCountry(@RequestPayload GdRecuperarComoTipoMimeWS request) {
-        GetCountryResponse response = new GetCountryResponse();
-        Country country = new Country();
-        country.setCapital("Capital");
-        response.setCountry(country);
+    public GdRecuperarComoTipoMimeWSResponse getTipoMime(@RequestPayload GdRecuperarComoTipoMimeWS request) {
+        GdRecuperarComoTipoMimeWSResponse response = new GdRecuperarComoTipoMimeWSResponse();
+        MethodResult methodResult = new MethodResult();
+        methodResult.setDocumento("aaaa");
+        response.setDocumento(methodResult);
         return response;
     }
 

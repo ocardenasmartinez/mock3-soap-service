@@ -8,40 +8,30 @@
                 <xs:element name="idDocRecuperar" type="xs:string"/>
                 <xs:element name="tipoDoc" type="xs:string"/>
                 <xs:element name="tipoMIMEDestino" type="xs:string"/>
-                <xs:element name="datosAcceso">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="idServidor" type="xs:string"/>
-                            <xs:element name="usuarioPool" type="xs:string"/>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="datosAcceso" type="tns:datosAcceso"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:element name="getCountryResponse">
-        <xs:complexType>
-            <xs:sequence>
-                <xs:element name="country" type="tns:country"/>
-            </xs:sequence>
-        </xs:complexType>
-    </xs:element>
-
-    <xs:complexType name="country">
+    <xs:complexType name="datosAcceso">
         <xs:sequence>
-            <xs:element name="name" type="xs:string"/>
-            <xs:element name="population" type="xs:int"/>
-            <xs:element name="capital" type="xs:string"/>
-            <xs:element name="currency" type="tns:currency"/>
+            <xs:element name="idServidor" type="xs:string"/>
+            <xs:element name="usuarioPool" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 
-    <xs:simpleType name="currency">
-        <xs:restriction base="xs:string">
-            <xs:enumeration value="GBP"/>
-            <xs:enumeration value="EUR"/>
-            <xs:enumeration value="PLN"/>
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:element name="gdRecuperarComoTipoMimeWSResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="documento" type="tns:methodResult"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="methodResult">
+        <xs:sequence>
+            <xs:element name="documento" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
 </xs:schema>
