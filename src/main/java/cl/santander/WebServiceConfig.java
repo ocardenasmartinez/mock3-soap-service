@@ -24,18 +24,19 @@ public class WebServiceConfig extends WsConfigurerAdapter {
         return new ServletRegistrationBean(messageDispatcherServlet, "/ws/*");
     }
 
-    @Bean(name = "tipomine")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema countriesSchema) {
+    @Bean(name = "tipomime")
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema tipoMimeSchema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("TipoMinePort");
+        wsdl11Definition.setPortTypeName("TipoMimePort");
         wsdl11Definition.setLocationUri("/ws");
         wsdl11Definition.setTargetNamespace("http://soap.service.santander.cl");
-        wsdl11Definition.setSchema(countriesSchema);
+        wsdl11Definition.setSchema(tipoMimeSchema);
         return wsdl11Definition;
+
     }
 
     @Bean
-    public XsdSchema countriesSchema() {
+    public XsdSchema tipoMimeSchema() {
         return new SimpleXsdSchema(new ClassPathResource("tipomime.xsd"));
     }
 }
