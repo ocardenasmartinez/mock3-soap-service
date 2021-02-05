@@ -1,0 +1,9 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:v1="http://soap.service.santander.cl">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <v1:getCountryRequest>
+         <v1:name>Spain</v1:name>
+      </v1:getCountryRequest>
+   </soapenv:Body>
+</soapenv:Envelope>
