@@ -15,7 +15,7 @@ public class CountryEndpoint {
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "getCountryRequest")
     @ResponsePayload
-    public GetCountryResponse getTipoMime(@RequestPayload GetCountryRequest request) {
+    public GetCountryResponse getCountry(@RequestPayload GetCountryRequest request) {
         GetCountryResponse response = new GetCountryResponse();
         Country country = new Country();
         country.setCapital("Capital");
