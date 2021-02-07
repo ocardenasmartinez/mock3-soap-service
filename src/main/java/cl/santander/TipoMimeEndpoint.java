@@ -16,6 +16,7 @@ public class TipoMimeEndpoint {
     public GdRecuperarComoTipoMimeWSResponse getTipoMime(@RequestPayload GdRecuperarComoTipoMimeWS request) {
         GdRecuperarComoTipoMimeWSResponse response = new GdRecuperarComoTipoMimeWSResponse();
         MethodResult methodResult = new MethodResult();
+        methodResult.setTipoMime("image/jpeg");
         methodResult.setDocumento("/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsU\n" +
                 "FRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwN\n" +
                 "Gg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3\n" +

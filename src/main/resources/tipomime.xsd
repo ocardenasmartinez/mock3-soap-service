@@ -31,6 +31,7 @@
     <xs:complexType name="methodResult">
         <xs:sequence>
             <xs:element name="documento" type="xs:string"/>
+            <xs:element name="tipoMime" type="xs:string"/>
         </xs:sequence>
     </xs:complexType>
 

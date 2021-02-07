@@ -39,4 +39,5 @@ public class WebServiceConfig extends WsConfigurerAdapter {
     public XsdSchema tipoMimeSchema() {
         return new SimpleXsdSchema(new ClassPathResource("tipomime.xsd"));
     }
+
 }
